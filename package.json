@@ -1,0 +1,19 @@
+{
+    "name": "zzp-match-worker",
+    "version": "0.0.1",
+    "description": "ZZP Match job to update relevance index",
+    "license": "UNLICENSED",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ProjectZZP/zzpmatchworker"
+    },
+    "dependencies": {
+        "node-rest-client": "^3.0.3"
+    },
+    "devDependencies": {
+        "gulp": "^3.9.1",
+        "gulp-install": "^0.6.0",
+        "gulp-zip": "^4.0.0",
+        "gulp-aws-lambda": "^1.0.11"
+    }
+}
