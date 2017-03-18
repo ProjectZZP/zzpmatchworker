@@ -1,5 +1,6 @@
 /.idea
 *-credentials.js
+*-credentials.sh
 *.iml
 node_modules
 /dist

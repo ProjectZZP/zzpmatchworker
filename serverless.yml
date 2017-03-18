@@ -19,7 +19,9 @@ service: aws-nodejs # NOTE: update this with your service name
 
 provider:
   name: aws
+  region: us-west-2
   runtime: nodejs4.3
+  role: "arn:aws:iam::736549927260:role/myLambdaAccess" #"arn:aws:iam::240254240210:role/LambdaGetRole"
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -67,13 +69,13 @@ provider:
 
 functions:
   work:
-    handler: worker.handler
+    handler: handler.matchWorker
     events:
       - http:
           path: updateProfile
           method: post
           cors: true
-    
+      - stream: arn:aws:dynamodb:us-west-2:736549927260:table/event/stream/2017-03-18T13:32:28.525
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
